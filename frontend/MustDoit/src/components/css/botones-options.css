@@ -1,0 +1,72 @@
+
+.card {
+    width: 500px;
+    height: 254px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    overflow: visible;
+    position: relative;
+}
+
+.card .item {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 350ms ease-in-out, box-shadow 350ms ease-in-out, opacity 250ms ease-in-out;
+}
+
+/* Efecto hover con resplandor */
+.item:hover {
+    transform: scale(1.5);
+    box-shadow: 0 0 14px 4px rgba(255, 0, 0, 0.5), 
+                0 0 10px 8px rgba(255, 0, 255, 0.5), 
+                0 0 4px 4px rgba(255, 0, 0, 0.5);
+}
+
+/* Reducir opacidad en los elementos NO seleccionados */
+.card:hover .item {
+    opacity: 0.3;
+}
+
+/* Mantener opacidad total solo en el elemento en hover */
+.card .item:hover {
+    opacity: 1;
+}
+
+/* Estilos de cada item */
+.item--1, .item--2, .item--3, .item--4 {
+    background: transparent;
+    border: 1px solid #ffffff3a; 
+}
+
+/* Iconos */
+.item svg {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 7px;
+}
+
+/* Estilos de texto */
+.quantity {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.text {
+    font-size: 12px;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+/* Colores de texto */
+.text--1 { color: rgba(149, 149, 255, 1); }
+.text--2 { color: rgba(252, 161, 71, 1); }
+.text--3 { color: rgba(66, 193, 110, 1); }
+.text--4 { color: rgba(220, 91, 183, 1); }

@@ -101,7 +101,7 @@ function ParallaxText({
 }
 
 export function VelocityScroll({
-  defaultVelocity = 3,
+  defaultVelocity = 1,
   numRows = 2,
   children,
   className,

@@ -34,7 +34,7 @@ const getRandomInt = (max: number): number => Math.floor(Math.random() * max);
 export function HyperText({
   children,
   className="text-neutral-500 max-w-lg sm:text-2xl sm:ml-3 sm:mr-3",
-  duration = 800,
+  duration =800,
   delay = 0,
   as: Component = "div",
   startOnView = false,
@@ -45,6 +45,7 @@ export function HyperText({
   const MotionComponent = motion.create(Component, {
     forwardMotionProps: true,
   });
+ 
 
   const [displayText, setDisplayText] = useState<string[]>(() =>
     children.split(""),
