@@ -5,11 +5,12 @@ import TypingAnimationDemo from './animation/typingText';
 import ScrollBasedVelocityDemo from './animation/typinTravel';
 import { Marquee3D } from './animation/users-travel';
 import { GridBeam } from './bg-components/Beam'
+import Benefits from './bg-components/benefites';
 import HomeWork from './homeWork';
 
 
 const Home = ()=> {
-  const wordks = ["Be","part", "of" ,"our", "family!"]
+
   return (
     <>
       <div className="w-full h-[700px] dark:bg-grid-white/[0.05] bg-grid-black/[0.07]">
@@ -31,18 +32,22 @@ const Home = ()=> {
           </div>
             </GridBeam>
       </div>
-      {/*Texto-travel*/ }
-      <ScrollBasedVelocityDemo text="Turn your ideas into action!,Your goals, your team, your success,Stay organized. Stay connected. Get things done."/>
+        {/*Texto-travel*/ }
+        <ScrollBasedVelocityDemo text="Turn your ideas into action!,Your goals, your team, your success,Stay organized. Stay connected. Get things done."/>
 
-       {/*About us*/ }
-      <div className='w-full h-[700px] pt-40 pl-36'>
-        <TitleAbout/>
-      </div>
-      <div className='h-[700px]  w-full'>
-      <WordRotateDemo className="text-5xl sm:text-6xl font-bold max-w-sm sm:ml-3 sm:mr-3" text={[wordks]} />
-      <Marquee3D/>
-      </div>
-     
+        {/*About us*/ }
+        <div className='w-full h-[700px] pt-40 pl-36'>
+          <TitleAbout/>
+        </div>
+        {/*user comments*/ }
+        <div className='h-[530px] pt-10  w-full'>
+        <Marquee3D/>
+        </div>
+
+        <div className='h-[1000px]  w-full'>
+        <Benefits/>
+        </div>
+      
   
 
     </>

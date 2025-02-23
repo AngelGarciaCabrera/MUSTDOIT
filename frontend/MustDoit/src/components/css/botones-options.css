@@ -70,3 +70,43 @@
 .text--2 { color: rgba(252, 161, 71, 1); }
 .text--3 { color: rgba(66, 193, 110, 1); }
 .text--4 { color: rgba(220, 91, 183, 1); }
+
+
+.item-trasparent {
+    color: white;
+    overflow: visible;
+    position: relative;
+}
+
+/* Estilos base de cada item */
+.itemTrasparent {
+    border-radius: 10px;
+    transition: transform 350ms ease-in-out, box-shadow 350ms ease-in-out, opacity 250ms ease-in-out;
+}
+
+/* Efecto de brillo al hacer hover */
+.itemTrasparent:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 14px 4px rgba(255, 0, 0, 0.5), 
+                0 0 10px 8px rgba(255, 0, 255, 0.5), 
+                0 0 4px 4px rgba(255, 0, 0, 0.5);
+}
+
+/* Reducir opacidad de los elementos NO seleccionados */
+.item-trasparent:hover .itemTrasparent:not(:hover) {
+    opacity: 0.3;
+}
+
+/* Mantener opacidad total en el elemento en hover */
+.itemTrasparent:hover {
+    opacity: 1;
+}
+
+/* Estilos de cada item */
+.item--1, .item--2, .item--3, .item--4 {
+    background: transparent;
+    border: 1px solid #ffffff3a; 
+}
+
+
+

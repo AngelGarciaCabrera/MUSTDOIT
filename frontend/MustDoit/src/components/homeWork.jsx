@@ -9,7 +9,7 @@ export const HomeWork = () => (
     <Pointer name="Angel" className={'relative flex h-fit w-full items-end justify-center'}>
       <div className={'relative h-[350px] w-full overflow-hidden'}>
         <div className="relative flex h-full w-full justify-end pt-4">
-          <AnimatedCursor text="Alejandro"/>
+          <AnimatedCursor text="angely uwu"/>
           <div className="relative z-[1] h-full w-3/4 rounded-tl-xl bg-white px-6 pt-6 shadow-xl md:w-7/12">
             <div className="flex w-full items-center justify-start gap-4 ">
               <svg

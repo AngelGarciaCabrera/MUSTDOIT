@@ -1,4 +1,5 @@
 import { cn } from "../bg-components/Cn";
+import WordRotateDemo from "./animation-goingdowm/animationGoingDow";
 import { Marquee } from "./User-animation";
 
 const reviews = [
@@ -99,11 +100,16 @@ const ReviewCard = ({ img, name, username, body }) => {
 };
 
 export function Marquee3D() {
+  const wordks = ["Be part", "of our", "family!"]
   return (
-    <div className="relative flex h-96 w-full flex-row items-center justify-center gap-4 overflow-hidden [perspective:600px]">
+    <>
     
+    <div className=" flex h-96 w-full  flex-row items-center justify-center gap-4 overflow-hidden [perspective:600px]">
+      <div className="">
+      <WordRotateDemo className=" justify-center text-5xl ml-16 sm:text-6xl font-bold max-w-sm " text={wordks} />
+      </div>
       <div
-        className="flex flex-row items-center gap-7"
+        className="flex flex-row items-center gap-7 opacity-15"
         style={{
           transform:
             "translateX(-100px) translateY(0px) translateZ(-100px) rotateX(20deg) rotateY(-5deg) rotateZ(50deg)",
@@ -171,5 +177,6 @@ export function Marquee3D() {
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
     </div>
-  );
+  </>);
+
 }

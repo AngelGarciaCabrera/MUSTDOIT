@@ -14,7 +14,7 @@ interface WordRotateProps {
 
 export function WordRotate({
   words,
-  duration = 2500,
+  duration = 1500,
   motionProps = {
     initial: { opacity: 0, y: -50 },
     animate: { opacity: 1, y: 0 },
