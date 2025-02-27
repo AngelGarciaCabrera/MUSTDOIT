@@ -6,13 +6,17 @@ import ScrollBasedVelocityDemo from './animation/typinTravel';
 import { Marquee3D } from './animation/users-travel';
 import { GridBeam } from './bg-components/Beam'
 import Benefits from './bg-components/benefites';
+import { Pointer } from './bg-components/cursorPointer';
+import ContactUS from './ContactUs';
 import HomeWork from './homeWork';
+import MakeYourProfile from './MakeYourProfile';
 
 
 const Home = ()=> {
 
   return (
     <>
+     <Pointer name="Angel " >
       <div className="w-full h-[700px] dark:bg-grid-white/[0.05] bg-grid-black/[0.07]">
         <GridBeam>
         <div className="flex flex-col sm:flex-row items-start justify-start pt-28 sm:pl-16 pl-11">
@@ -29,26 +33,37 @@ const Home = ()=> {
             <div className="sm:w-1/2 sm:mt-0 mt-4 lg:mr-44">
               <HomeWork />
             </div>
-          </div>
+        </div>
             </GridBeam>
       </div>
-        {/*Texto-travel*/ }
+      </Pointer>
+          {/*Texto-travel*/ }
         <ScrollBasedVelocityDemo text="Turn your ideas into action!,Your goals, your team, your success,Stay organized. Stay connected. Get things done."/>
 
-        {/*About us*/ }
+          {/*About us*/ }
         <div className='w-full h-[700px] pt-40 pl-36'>
           <TitleAbout/>
         </div>
-        {/*user comments*/ }
+          {/*user comments*/ }
         <div className='h-[530px] pt-10  w-full'>
-        <Marquee3D/>
+          <Marquee3D/>
+        </div>
+          {/*benefits*/ }
+        <div className='h-[1200px]  w-full'>
+            <Benefits/>
+        </div>
+        {/*benefits*/ }
+        
+        <div>
+          <ContactUS/>
         </div>
 
-        <div className='h-[1000px]  w-full'>
-        <Benefits/>
+           {/*Profile*/ }
+        <div className='h-[1200px]  w-full pt-72 '>
+          <MakeYourProfile/>
         </div>
       
-  
+   
 
     </>
   );

@@ -4,23 +4,27 @@ import NavBar from './components/Under-Navbar'
 import Home from './components/Home'
 
 
+
 function App() {
   return (
     <>
-    <div className='layaout'>
-        <Layaout/>
-      <div className='bobby'>
-          <div className=''>
-            <Home/>
+    
+        <div className='layaout'>
+            <Layaout/>
+          <div className='bobby'>
+        
+              <div className=''>
+                <Home/>
+              </div>
+          
           </div>
-      </div>
-    <div className='under-menu'>
-        <NavBar tabs={['Apps', 'Components', 'Websites', 'Other stuff']} />
-    </div>  
-     
-    </div>
+        <div className='under-menu'>
+            <NavBar tabs={['Apps', 'Components', 'Websites', 'Other stuff']} />
+        </div>  
+        
+        </div>
    
-  
+
     </> 
   )
 }

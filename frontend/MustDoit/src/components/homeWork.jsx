@@ -6,7 +6,7 @@ import { Pointer } from '../components/bg-components/cursorPointer'
 
 export const HomeWork = () => (
  
-    <Pointer name="Angel" className={'relative flex h-fit w-full items-end justify-center'}>
+    <div className={'relative flex h-fit w-full items-end justify-center'}>
       <div className={'relative h-[350px] w-full overflow-hidden'}>
         <div className="relative flex h-full w-full justify-end pt-4">
           <AnimatedCursor text="angely uwu"/>
@@ -82,7 +82,7 @@ export const HomeWork = () => (
         </div>
       </div>
       <div className="absolute bottom-0 right-0  h-full w-3/4 rounded-full bg-gradient-to-br from-red-500 via-fuchsia-500 to-red-500 opacity-[0.3] blur-3xl" />
-    </Pointer>
+    </div>
 )
 
 export default HomeWork;
