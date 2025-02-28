@@ -58,21 +58,21 @@ export const NavBar: React.FC<{ tabs: string[] }> = ({ tabs }) => {
           {link}
         </button>
       ))}
-      <div className={'absolute inset-0 h-full p-2 -z-[1] overflow-hidden'}>
-        <div className={'relative h-full w-full overflow-hidden'}>
-          <div
-            style={{
-              left: `calc(${currentLink.left || 0}px - 0.75rem + 0.25rem)`,
-              width: `${currentLink.width || 0}px`
-            }}
-            className={twMerge(
-              `transition-[color,left,width] duration-300 absolute top-1/2 -translate-y-1/2 h-full rounded-full -z-[1]`,
-              //just skips animation on page load
-              fired.current ? 'dark:bg-white bg-neutral-950' : 'bg-transparent'
-            )}
-          />
-        </div>
+     <div className={'absolute bottom-0 left-1/2 -translate-x-1/2 w-full p-2 -z-[1] overflow-hidden'}>
+      <div className={'relative h-full w-full overflow-hidden'}>
+        <div
+          style={{
+            left: `calc(${currentLink.left || 0}px - 0.75rem + 0.25rem)`,
+            width: `${currentLink.width || 0}px`
+          }}
+          className={twMerge(
+            `transition-[color,left,width] duration-300 absolute top-1/2 -translate-y-1/2 h-full rounded-full -z-[1]`,
+            fired.current ? 'dark:bg-white bg-neutral-950' : 'bg-transparent'
+          )}
+        />
       </div>
+    </div>
+
     </div>
   )
 }

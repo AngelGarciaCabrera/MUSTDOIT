@@ -5,7 +5,7 @@ const Benefits = ()=>{
     const text = 'Everything you need as far as a click'
     return(<>
 
-    <div className="dark:bg-grid-white/[0.05] bg-grid-black/[0.07] py-0 sm:py-0 ">
+    <div className="dark:bg-grid-white/[0.05] bg-grid-black/[0.07] h-5/6 py-0 sm:py-0 ">
         <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 pt-9">
        
             <h2 className="text-center text-base/7 font-semibold text-[#d946ef]">Make your work faster</h2>

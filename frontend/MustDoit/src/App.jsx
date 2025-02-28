@@ -2,28 +2,22 @@ import './App.css'
 import Layaout from './components/Layaout'
 import NavBar from './components/Under-Navbar'
 import Home from './components/Home'
-
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Dashboard from './components/dashboard';
 
 function App() {
   return (
     <>
-    
-        <div className='layaout'>
-            <Layaout/>
-          <div className='bobby'>
-        
-              <div className=''>
-                <Home/>
-              </div>
-          
-          </div>
-        <div className='under-menu'>
-            <NavBar tabs={['Apps', 'Components', 'Websites', 'Other stuff']} />
-        </div>  
-        
-        </div>
-   
+      <BrowserRouter>
+      <Layaout/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Home />} />
+          <Route path="/Dashboard" element={<Dashboard />} />
+        </Routes>
+        <NavBar tabs={['Apps', 'Components', 'Websites', 'Other stuff']} />
+    </BrowserRouter>
+      
 
     </> 
   )

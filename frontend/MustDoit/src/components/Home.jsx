@@ -63,8 +63,7 @@ const Home = ()=> {
           <MakeYourProfile/>
         </div>
       
-   
-
+S
     </>
   );
 }

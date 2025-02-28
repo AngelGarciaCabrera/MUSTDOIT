@@ -26,7 +26,7 @@ const MakeYourProfile = () => {
           </h2>
         </BoxReveal>
 
-        <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+        <BoxReveal boxColor={"#d946ef"} duration={0.5}>
           <div className="mt-4 text-[1.4rem]">
             <p>
               → Through your profile, your friends will be able to see your projects, follow you,  
