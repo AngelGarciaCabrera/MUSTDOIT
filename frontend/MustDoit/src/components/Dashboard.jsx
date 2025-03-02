@@ -1,17 +1,30 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { PlusCircle, Clock, CheckCircle, XCircle, 
          Bell,  Search, MoreVertical, Edit, Trash2, ArrowUpRight, 
          } from 'lucide-react';
 import SidebarMenu from './Sidebar';
 import UserProyects from './UserProyects';
+import { getEntity } from '../db/supabase/supabaseFunctions';
 
 const Dashboard = () => {
-  // Sample user data
-  const user = {
-    name: "Angel Garcia",
-    email: "AngelGarcia@gmail.com",
-    avatar: "/api/placeholder/40/40"
+  const [user, setUser] = useState(null);
+
+const getUser = async () => {
+  const  tablaName ='user'
+  const id ='1'
+    try {
+        getEntity(tablaName,id,setUser)
+    } catch (error) {
+       console.log('error al buscar al usuario')
+    }
+};
+
+useEffect(() => {
+  const fetchUser = async () => {
+      await getUser();
   };
+  fetchUser();
+}, []);
 
   // Sample projects data
   const [projects, setProjects] = useState([
@@ -62,7 +75,7 @@ const Dashboard = () => {
         <div className="p-6">
           <div className="flex items-center justify-between mb-6">
             <div>
-              <h1 className="text-2xl font-bold mb-1">Bienvenido, {user.name}</h1>
+              <h1 className="text-2xl font-bold mb-1">Bienvenido, {user ? user.name : "No hay usuario"}</h1>
               <p className="text-gray-400">Aquí está el resumen de tu trabajo</p>
             </div>
             <div className="flex items-center space-x-3">
