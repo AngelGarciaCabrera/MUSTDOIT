@@ -65,7 +65,7 @@ const SidebarMenu = ({ user }) => {
             </div>
             <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-black"></div>
           </div>
-          <div>
+          <div className='overflow-hidden'>
             <h2 className="font-medium" style={{ color: "#d946ef" }}>{user.name}</h2>
             <p className="text-sm text-gray-500">{user.email}</p>
           </div>
